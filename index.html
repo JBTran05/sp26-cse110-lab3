@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Team Meeting Minutes</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Meeting minutes for our team">
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f4dd.png" type="image/png">
+  </head>
+  <body>
+
+    <header>
+      <h1>Team Meeting Minutes</h1>
+      <h2>Brainstorming Session</h2>
+    </header>
+
+    <nav>
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#details">Meeting Details</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#old-business">Old Business</a></li>
+        <li><a href="#new-business">New Business</a></li>
+        <li><a href="#misc">Miscellaneous</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form">RSVP Form</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <section id="details">
+        <h2>Meeting Details</h2>
+        <p><strong>Date:</strong> April 14, 2025</p>
+        <p><strong>Location:</strong> Zoom</p>
+        <h3>Attendance</h3>
+        <ul>
+          <li>Jordan (present)</li>
+          <li>Alex (present)</li>
+          <li>Sam (absent)</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Review last week's progress</li>
+          <li>Discuss new features</li>
+          <li>Assign action items</li>
+        </ol>
+      </section>
+
+      <hr>
+
+      <section id="old-business">
+        <h2>Old Business</h2>
+        <p>From the last meeting, the team was supposed to finish the <em>initial wireframes</em>. 
+        <b>Status:</b> <strong>Incomplete</strong> — pushed to this sprint.</p>
+      </section>
+
+      <hr>
+
+      <section id="new-business">
+        <h2>New Business</h2>
+        <p>Topics discussed:</p>
+        <ul>
+          <li>Setting up the <i>GitHub repository</i></li>
+          <li>Defining the tech stack</li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <details>
+          <summary>Questions & Concerns</summary>
+          <p>Will we need a backend? <br> TBD — revisit next meeting.</p>
+        </details>
+        <div>
+          <p>General notes: <span>nothing urgent at this time.</span></p>
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="media">
+        <h2>Media</h2>
+        <h3>Whiteboard Diagram</h3>
+        <img src="screenshots/image.jpg" alt="Whiteboard diagram from meeting">
+
+        <h3>Audio Recording</h3>
+        <audio controls>
+          <source src="audio/meeting.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Recording</h3>
+        <video controls width="400">
+          <source src="video/meeting.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <hr>
+
+      <section id="form">
+        <h2>RSVP for Next Meeting</h2>
+        <form>
+          <fieldset>
+            <legend>Your Info</legend>
+
+            <label>Name: <input type="text" name="name"></label><br><br>
+
+            <label>Date of next meeting: <input type="date" name="date"></label><br><br>
+
+            <label>Will you attend?</label><br>
+            <label><input type="radio" name="attend" value="yes"> Yes</label>
+            <label><input type="radio" name="attend" value="no"> No</label><br><br>
+
+            <label>Reminder preferences:</label><br>
+            <label><input type="checkbox" name="email"> Email</label>
+            <label><input type="checkbox" name="slack"> Slack</label><br><br>
+
+            <label>Notes: <textarea name="notes" rows="3" cols="30"></textarea></label><br><br>
+
+            <label>Preferred meeting time:
+              <input list="times" name="time">
+              <datalist id="times">
+                <option value="9:00 AM">
+                <option value="12:00 PM">
+                <option value="3:00 PM">
+              </datalist>
+            </label><br><br>
+
+            <label>Meeting format:
+              <select name="format">
+                <option value="zoom">Zoom</option>
+                <option value="inperson">In Person</option>
+                <option value="hybrid">Hybrid</option>
+              </select>
+            </label><br><br>
+
+            <button type="submit">Submit RSVP</button>
+
+          </fieldset>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Meeting minutes recorded by Jordan &mdash; CSE 110 Spring 2025</p>
+    </footer>
+
+  </body>
+</html>
