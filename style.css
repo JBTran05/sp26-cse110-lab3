@@ -1,52 +1,90 @@
+/* CSS VARIABLES (Custom Properties) */
 :root {
-        --primary-color: #2c3e50;
-        --accent-color: #3498db;
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
 }
 
+/* BASE STYLES */
 body {
-    font-family: 'Merriweather', "Times New Roman", serif;
+    font-family: 'Merriweather', "Times New Roman", serif; 
     margin: 0;
-    padding: 20px;
-    background-color: #353434;
-    color: #333;
+    padding: 20px; 
+    background-color: #353434; 
+    color: color(srgb 0.2 0.2 0.2); /* wider-gamut color */
 }
 
+/* TYPOGRAPHY */
 h1, h2, h3 {
-    color: #2c3e50;
+    font-family: 'Merriweather', serif;
+    color: #2c3e50; /* hex color */
+    font-size: 2em; /* relative unit: em */
 }
 
+h2 {
+    font-size: 1.5rem; /* relative unit: rem */
+}
+
+/* Override heading color inside header */
 header h1, header h2, header h3 {
-    color: white;
+    color: white; /* color name */
 }
 
+/* IMAGE */
 img {
     border-radius: 50%;
-    width: 150px;
+    width: 150px; /* absolute unit: px */
+    display: block; /* block display */
+    margin: auto; /* auto margin to center */
 }
 
+/* LINKS & PSEUDO-CLASSES */
 a {
-    color: #3498db;
+    color: #3498db; /* hex color */
     text-decoration: none;
 }
 
+/* :hover pseudo-class */
 a:hover {
     text-decoration: underline;
 }
 
-header {
-    background-color: var(--primary-color, #2c3e50);
-    color: var(--accent-color, blue);
-    padding: 20px;
-    text-align: center;
+/* :active pseudo-class */
+a:active {
+    color: var(--primary-color, #2c3e50);
 }
 
+/* HEADER */
+header {
+    background-color: var(--primary-color, #2c3e50); /* CSS variable with fallback */
+    color: white;
+    /* Padding longhand - absolute units */
+    padding-top: 20pt; /* absolute unit: pt */
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    /* Margin longhand */
+    margin-top: 0px;
+    margin-bottom: 0.5cm; /* absolute unit: cm */
+    margin-left: 0px;
+    margin-right: 0px;
+    /* Border shorthand */
+    border: 2px solid var(--primary-color, #2c3e50);
+}
+
+/* NAVIGATION */
 nav {
-    background-color: #ecf0f1;
-    padding: 10px 20px;
+    background-color: rgb(236, 240, 241); /* rgb color */
+    /* Padding shorthand */
+    padding: 10px 20px 10px 20px;
+    /* sticky positioning - stays at top when scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav h3 {
-    color: black;
+    color: black; /* color name */
 }
 
 nav ul {
@@ -54,44 +92,60 @@ nav ul {
     padding: 0;
 }
 
+/* inline display for horizontal nav links */
 nav ul li {
     display: inline;
     margin-right: 15px;
 }
 
+/* MAIN CONTENT */
 main {
+    width: 90%; /* relative unit: % */
     max-width: 900px;
+    min-width: 300px;
+    /* Margin shorthand with auto */
     margin: 20px auto;
-    background: white;
+    background-color: hsl(0, 0%, 100%); /* hue, saturation, lightness color */
     padding: 30px;
     border-radius: 8px;
 }
 
+/* SECTIONS */
 section {
+    /* Margin shorthand */
     margin-bottom: 30px;
+    /* Padding longhand */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* Border longhand */
+    border-style: solid;
+    border-color: #2c3e50;
+    border-width: 1px;
+    border-radius: 5px;
+    /* relative positioning */
+    position: relative;
 }
 
-/* Color name */
-header {
-    background-color: darkslategray;
+/* inline-block display for section headings */
+section h2 {
+    display: inline-block;
+    border-bottom: 2px solid var(--primary-color, #2c3e50);
+    margin-bottom: 10px;
 }
 
-/* rgb() */
-nav {
-    background-color: rgb(236, 240, 241);
-}
-
-/* hsl() */
-main {
-    background-color: hsl(0, 0%, 100%);
-}
-
-/* wider gamut color */
-body {
-    color: color(srgb 0.2 0.2 0.2);
-}
-
-/* color-mix */
+/* FOOTER */
 footer {
+    /* color-mix color */
     background-color: color-mix(in srgb, #2c3e50 80%, white 20%);
+}
+
+/* FLEXBOX */
+nav ul {
+    display: flex; /* flex display */
+    flex-direction: row; /* arrange items horizontally */
+    flex-wrap: wrap; /* wrap items if screen is too small */
+    justify-content: flex-start; /* align items to the left */
+    gap: 15px; /* space between items */
 }
