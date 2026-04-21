@@ -133,6 +133,7 @@ section h2 {
     display: inline-block;
     border-bottom: 2px solid var(--primary-color, #2c3e50);
     margin-bottom: 10px;
+    text-decoration: underline; /* text decoration */
 }
 
 /* FOOTER */
@@ -156,4 +157,65 @@ main {
     grid-template-columns: 1fr; /* single column layout */
     grid-gap: 20px; /* space between grid items */
     align-items: start; /* align items to the top */
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        min-width: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* height property */
+header {
+    min-height: 100px;
+}
+
+/* rgba color */
+hr {
+    border: 1px solid rgba(44, 62, 80, 0.3); /* rgb with alpha */
+}
+
+/* display none example */
+/* hides element, can be toggled with JS later */
+.hidden {
+    display: none;
+}
+
+/* hsla color */
+section:hover {
+    background-color: hsla(210, 29%, 24%, 0.05); /* hsla with alpha */
 }
