@@ -219,3 +219,62 @@ hr {
 section:hover {
     background-color: hsla(210, 29%, 24%, 0.05); /* hsla with alpha */
 }
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 3px solid var(--accent-color, #3498db);
+}
+
+/* ID Selector */
+#details {
+    border-color: var(--accent-color, #3498db);
+}
+
+/* Attribute Selector */
+input[type=text] {
+    border: 1px solid #2c3e50;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Child Combinator */
+main > section {
+    margin-top: 10px;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p {
+    margin-top: 0;
+    color: #555;
+}
+
+/* General Sibling Combinator */
+h2 ~ p {
+    line-height: 1.6;
+}
+
+/* Combining Two Selectors */
+section#details {
+    border-top: 3px solid var(--accent-color, #3498db);
+}
+
+/* :has() selector */
+section:has(h2) {
+    padding-top: 25px;
+}
+
+/* Nested Selectors */
+nav {
+    & ul {
+        & li {
+            font-size: 0.95em;
+        }
+    }
+}
+
