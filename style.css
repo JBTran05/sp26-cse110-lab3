@@ -1,5 +1,10 @@
+:root {
+        --primary-color: #2c3e50;
+        --accent-color: #3498db;
+}
+
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-family: 'Merriweather', "Times New Roman", serif;
     margin: 0;
     padding: 20px;
     background-color: #353434;
@@ -29,8 +34,8 @@ a:hover {
 }
 
 header {
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--primary-color, #2c3e50);
+    color: var(--accent-color, blue);
     padding: 20px;
     text-align: center;
 }
@@ -40,9 +45,6 @@ nav {
     padding: 10px 20px;
 }
 
-nav h3 {
-    color: #2c3e50;
-}
 
 nav ul {
     list-style: none;
@@ -64,4 +66,29 @@ main {
 
 section {
     margin-bottom: 30px;
+}
+
+/* Color name */
+header {
+    background-color: darkslategray;
+}
+
+/* rgb() */
+nav {
+    background-color: rgb(236, 240, 241);
+}
+
+/* hsl() */
+main {
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* wider gamut color */
+body {
+    color: color(srgb 0.2 0.2 0.2);
+}
+
+/* color-mix */
+footer {
+    background-color: color-mix(in srgb, #2c3e50 80%, white 20%);
 }
