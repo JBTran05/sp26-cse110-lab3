@@ -149,3 +149,11 @@ nav ul {
     justify-content: flex-start; /* align items to the left */
     gap: 15px; /* space between items */
 }
+
+/* GRID */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* single column layout */
+    grid-gap: 20px; /* space between grid items */
+    align-items: start; /* align items to the top */
+}
