@@ -45,12 +45,9 @@ nav {
     padding: 10px 20px;
 }
 
-<<<<<<< HEAD
-=======
 nav h3 {
     color: black;
 }
->>>>>>> 04b29c22070fe5ba8a2ea59b0a982dba568d1d99
 
 nav ul {
     list-style: none;
@@ -73,7 +70,6 @@ main {
 section {
     margin-bottom: 30px;
 }
-<<<<<<< HEAD
 
 /* Color name */
 header {
@@ -99,5 +95,3 @@ body {
 footer {
     background-color: color-mix(in srgb, #2c3e50 80%, white 20%);
 }
-=======
->>>>>>> 04b29c22070fe5ba8a2ea59b0a982dba568d1d99
