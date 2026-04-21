@@ -7,7 +7,11 @@ body {
 }
 
 h1, h2, h3 {
-    color: #f5f7f8;
+    color: #2c3e50;
+}
+
+header h1, header h2, header h3 {
+    color: white;
 }
 
 img {
